@@ -1,0 +1,31 @@
+server:
+  port: 8084
+  http2:
+    enabled: true
+  servlet:
+    context-path: /shipment/v1
+
+spring:
+  application:
+    name: ms-shipment
+  jackson:
+    default-property-inclusion: NON_NULL
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info,health,logfile,prometheus
+    prometheus:
+      enabled: true
+    metrics:
+      export:
+        prometheus:
+          enabled: true
+          descriptions: true
+
+logging:
+  file:
+    name: ${spring.application.name}.log
+    max-history: 1
+    clean-history-on-start: true
