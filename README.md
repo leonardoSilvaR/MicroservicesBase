@@ -8,3 +8,4 @@ This repository contains a set of microservices to study purposes.
 - Undertow 2.0.30
 - Flyway 6.0.8
 - HikariCP 3.4.5
+- REST as IPC using RestTemplate over HTTP
