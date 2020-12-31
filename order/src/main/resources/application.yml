@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
   http2:
     enabled: true
   servlet:
@@ -29,3 +29,9 @@ logging:
     name: ${spring.application.name}.log
     max-history: 1
     clean-history-on-start: true
+
+integrations:
+  account:
+    host: http://account-service:8080/account/v1
+    retrieveAccount: /accounts/{accountId}
+

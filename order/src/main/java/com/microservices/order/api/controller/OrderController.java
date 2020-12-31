@@ -24,7 +24,7 @@ public class OrderController {
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> createAccount(@RequestBody OrderRequest orderRequest, UriComponentsBuilder uriComponentsBuilder) {
-        URI location = uriComponentsBuilder.path("/orders/{accountId}")
+        URI location = uriComponentsBuilder.path("/orders/{orderId}")
                 .buildAndExpand(orderService.createOrder(orderRequest).getOrderId())
                 .toUri();
         log.info("[Order Controller] Order Created.");
